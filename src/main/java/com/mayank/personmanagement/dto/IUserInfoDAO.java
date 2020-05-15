@@ -1,0 +1,14 @@
+package com.mayank.personmanagement.dto;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.mayank.personmanagement.dao.UserInfo;
+
+public interface IUserInfoDAO extends JpaRepository<UserInfo, Integer>{
+
+	List<UserInfo> findByPersonPersonId(int personId);
+//	List<UserInfo> findByChildrenChildrenId(int childernId);
+	
+}
