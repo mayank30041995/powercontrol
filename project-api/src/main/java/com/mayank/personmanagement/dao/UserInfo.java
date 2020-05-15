@@ -1,0 +1,100 @@
+package com.mayank.personmanagement.dao;
+
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
+@Entity
+public class UserInfo {
+    
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int infoid;
+	private String firstName;
+	private String middleName;
+	private String lastName;
+	private String dateOfBirth;
+	private String bloodGroup;
+	
+	@OneToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "personId", nullable = false)
+	private Person person;
+//	@OneToOne
+//	private Children children;
+	
+
+	public UserInfo() {
+		
+	}
+	public UserInfo(int infoid, String firstName, String middleName, String lastName, String dateOfBirth,
+			String bloodGroup,  int personId) {
+		super();
+		this.infoid = infoid;
+		this.firstName = firstName;
+		this.middleName = middleName;
+		this.lastName = lastName;
+		this.dateOfBirth = dateOfBirth;
+		this.bloodGroup = bloodGroup;
+		this.person = new Person(personId,"");
+//		this.children=new Children(personId,"",' ',"",true,childrenId);
+	}
+	
+
+	public int getInfoid() {
+		return infoid;
+	}
+	public void setInfoid(int infoid) {
+		this.infoid = infoid;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getMiddleName() {
+		return middleName;
+	}
+	public void setMiddleName(String middleName) {
+		this.middleName = middleName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public String getDateOfBirth() {
+		return dateOfBirth;
+	}
+	public void setDateOfBirth(String dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+	public String getBloodGroup() {
+		return bloodGroup;
+	}
+	public void setBloodGroup(String bloodGroup) {
+		this.bloodGroup = bloodGroup;
+	}
+
+	public Person getPerson() {
+		return person;
+	}
+	
+	public void setPerson(Person person) {
+		this.person = person;
+	}
+	
+//	public Children getChildren() {
+//		return children;
+//	}
+//	public void setChildren(Children children) {
+//		this.children = children;
+//	}
+		
+	
+}

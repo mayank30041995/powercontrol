@@ -1,0 +1,25 @@
+package com.mayank.employeemanagement.service;
+import java.util.List;
+
+import com.mayank.employeemanagement.dao.Phone;
+
+public interface IPhoneService {
+
+	List<Phone> getAllPhone();
+
+	Phone getPhoneById(int phoneid);
+
+	void addPhone(Phone phone);
+
+	void updatePhone(Phone phone);
+
+	void deletePhone(int phoneid);
+
+	List<Phone> getPhoneByDept(String deptId);
+
+	List<Phone> getPhoneList(int phoneId);
+
+
+	
+
+}

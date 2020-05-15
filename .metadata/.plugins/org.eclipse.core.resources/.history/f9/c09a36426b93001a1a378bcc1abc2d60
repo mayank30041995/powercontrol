@@ -1,0 +1,68 @@
+package com.mayank.personmanagement.service;
+
+import java.util.ArrayList;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.mayank.personmanagement.dao.Person;
+import com.mayank.personmanagement.dto.IPersonDAO;
+
+@Service
+public class PersonServiceImpl implements IPersonService {
+
+    List<Person> empList  ;//= new ArrayList<>(Arrays.asList(new Employee(1, "Raj", "payment"),
+//			new Employee(2, "Rahul", "DTOS"), new Employee(3, " Rahul", "DNS")));
+	@Autowired
+	IPersonDAO daoRef;
+
+	@Override
+	public List<Person> getAllPerson() {
+		// TODO Auto-generated method stub
+//		return empList;
+		return daoRef.findAll();
+	}
+
+	@Override
+	public Person getPersonById(int personId) {
+		// TODO Auto-generated method stub
+//		return empList.stream().filter(e -> e.getEmpId()== empId).findFirst().get();
+		return daoRef.getOne(personId);
+	}
+
+	@Override
+	public void addPerson(Person person) { 
+		// TODO Auto-generated method stub
+//		empList.add(employee);
+		daoRef.save(person);
+	}
+
+	@Override
+	public void updatePerson(Person person, int personId) {
+		// TODO Auto-generated method stub
+//		for( int i=0;i<empList.size();i++) {
+//			Employee e=empList.get(i);
+//			if(e.getEmpId()==empId) {
+//				empList.set(i, employee);
+//				return;
+//			}
+		daoRef.save(person);
+	}
+
+	@Override
+	public void deletePerson(int personId) {
+		// TODO Auto-generated method stub
+//		empList.removeIf(e -> e.getEmpId() == empId);
+		daoRef.deleteById(personId);
+	}
+
+	@Override
+	public List<Person> getPersonByDept(String deptName) {
+		// TODO Auto-generated method stub
+		return daoRef.findByDeptName(deptName);
+	}
+}

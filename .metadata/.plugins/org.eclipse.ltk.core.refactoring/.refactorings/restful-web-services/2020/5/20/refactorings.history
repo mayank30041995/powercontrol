@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;pom.xml&apos; to &apos;restful-web-services&apos;" description="Move &apos;pom.xml&apos; to &apos;restful-web-services&apos;" destination="/restful-web-services" element1="/spring-boot-first-web-application/pom.xml" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1589205318975" updateReferences="true"/>
+</session>

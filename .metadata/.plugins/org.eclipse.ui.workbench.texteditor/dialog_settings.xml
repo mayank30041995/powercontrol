@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="childrenName"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="ChildrenName"/>
+			<item value="ChildrenId"/>
+			<item value="serviceProj"/>
+			<item value="member_id"/>
+			<item value="children_id"/>
+			<item value="memid"/>
+			<item value="Project"/>
+			<item value="long"/>
+			<item value="id"/>
+			<item value="memServiceRef"/>
+			<item value="reference"/>
+			<item value="empId"/>
+			<item value="Employee"/>
+		</list>
+		<list key="replacehistory">
+			<item value="childrenName"/>
+			<item value="childrenId"/>
+			<item value="serviceChild"/>
+			<item value="memid"/>
+			<item value="childid"/>
+			<item value="Children"/>
+			<item value="member_id"/>
+			<item value="int"/>
+			<item value=""/>
+			<item value="id"/>
+			<item value="memberservice"/>
+			<item value="Member"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="476"/>
+		<item key="DIALOG_Y_ORIGIN" value="75"/>
+		<item key="DIALOG_WIDTH" value="348"/>
+		<item key="DIALOG_HEIGHT" value="437"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+</section>

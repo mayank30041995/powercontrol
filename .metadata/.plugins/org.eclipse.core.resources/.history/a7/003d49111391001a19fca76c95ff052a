@@ -1,0 +1,43 @@
+package com.mayank.employeemanagement.dao;
+
+
+import javax.persistence.Entity;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+
+@Entity
+public class Person {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int personId;
+	private String deptName;
+
+	public Person() {
+		
+	}
+	
+	public Person(int personId, String deptName) {
+		super();
+		this.personId = personId;
+		this.deptName = deptName;
+		
+	}
+	public int getpersonId() {
+		return personId;
+	}
+	public void setEmpId(int personId) {
+		this.personId = personId;
+	}
+
+	public String getDeptName() {
+		return deptName;
+	}
+	public void setDeptName(String deptName) {
+		this.deptName = deptName;
+	}
+
+}
+ 

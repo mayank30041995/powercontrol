@@ -1,0 +1,15 @@
+package com.mayank.employeemanagement;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class PersonManagementAPI {
+	
+	public static void main(String [] args) {
+	     
+		SpringApplication.run(PersonManagementAPI.class,args);
+//		sudo kill -9 $(sudo lsof -t -i:8080)
+
+	}
+}

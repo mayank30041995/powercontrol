@@ -1,0 +1,4 @@
+ cd (directory path ).
+ cd h2/bin.
+ chmod +x h2.sh.
+ ./h2.sh.
